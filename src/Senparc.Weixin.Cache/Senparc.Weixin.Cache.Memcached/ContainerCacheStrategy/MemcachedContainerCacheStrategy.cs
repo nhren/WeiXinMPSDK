@@ -28,9 +28,6 @@ using System.Net;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
-using Enyim.Caching;
-using Enyim.Caching.Configuration;
-using Enyim.Caching.Memcached;
 using Senparc.CO2NET.Cache;
 using Senparc.CO2NET.Cache.Memcached;
 using Senparc.Weixin.Containers;
@@ -53,7 +50,7 @@ namespace Senparc.Weixin.Cache.Memcached
 
         #region 单例
         /// <summary>
-        /// LocalCacheStrategy的构造函数
+        /// MemcachedContainerCacheStrategy 的构造函数
         /// </summary>
         MemcachedContainerCacheStrategy()
         {
@@ -65,7 +62,7 @@ namespace Senparc.Weixin.Cache.Memcached
         }
 
         //静态LocalCacheStrategy
-        public static new IContainerCacheStrategy Instance
+        public static IContainerCacheStrategy Instance
         {
             get
             {
